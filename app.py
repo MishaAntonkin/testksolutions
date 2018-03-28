@@ -1,8 +1,3 @@
-import hashlib
-from collections import OrderedDict
-import itertools
-import json
-
 from flask import Flask, render_template
 
 from forms import TextForm
@@ -24,6 +19,7 @@ def home():
             return invoice(form)
         form.clearform()
     else:
+        #later write log
         print(form.errors)
     return render_template("buypage.html", form=form)
 
