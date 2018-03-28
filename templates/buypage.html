@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1>Enter your buy information: </h1>
+<form class="border col-sm-7 m-auto" method="post" action="/">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.money.label }}
+        {{ form.money }}
+    </p>
+    <p>
+        {{ form.currencies.label }}
+        {{ form.currencies }}
+    </p>
+    <p>
+        {{ form.description.label }}
+        {{ form.description }}
+    </p>
+    <p>
+        {{ form.buy(class_="btn btn-primary") }}
+    </p>
+
+</form>
+{% endblock %}
